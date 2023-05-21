@@ -105,9 +105,6 @@ def main():
         os.path.join(rootdir, 'archives'))
     rm_unnecessary_folders(rootdir)
     print_in_console(dict_fact_files, dict_known_unknown_extentions)
-
-
-if __name__ == '__main__':
     dict_extentions = {'archives': ['ZIP', 'GZ', 'TAR'], 'audio': ['MP3', 'OGG', 'WAV', 'AMR'],
                        'documents': ['DOC', 'DOCX', 'TXT', 'PDF', 'XLSX', 'PPTX'],
                        'images': ['JPEG', 'PNG', 'JPG', 'SVG'], 'video': ['AVI', 'MP4', 'MOV', 'MKV']} 
@@ -117,4 +114,7 @@ if __name__ == '__main__':
 
     dict_known_unknown_extentions = {
         'known extensions': set(), 'unknown extensions': set()}
+
+
+if __name__ == '__main__':
     main()
