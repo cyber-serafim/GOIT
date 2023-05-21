@@ -9,4 +9,4 @@ setup (
     license= 'No License',
     packages=find_namespace_packages(),
     include_package_data=True,
-    entry_points={'console_scripts':['clean-folder = clean_folder.clean:clean_f']})
+    entry_points={'console_scripts':['clean-folder = clean_folder.clean:main']})
