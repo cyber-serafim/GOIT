@@ -94,6 +94,15 @@ def print_in_console(dict_fact_files, dict_known_unknown_extentions):
 
 
 def main():
+    dict_extentions = {'archives': ['ZIP', 'GZ', 'TAR'], 'audio': ['MP3', 'OGG', 'WAV', 'AMR'],
+                       'documents': ['DOC', 'DOCX', 'TXT', 'PDF', 'XLSX', 'PPTX'],
+                       'images': ['JPEG', 'PNG', 'JPG', 'SVG'], 'video': ['AVI', 'MP4', 'MOV', 'MKV']} 
+                       
+    dict_fact_files = {'archives': [],  'audio': [], 'documents': [], 
+                      'images': [], 'uknown_extension': [], 'video': []}
+
+    dict_known_unknown_extentions = {
+        'known extensions': set(), 'unknown extensions': set()}
     validate_correct_path()
     rootdir = sys.argv[1]
     lst_all_files = []
@@ -106,15 +115,5 @@ def main():
     rm_unnecessary_folders(rootdir)
     print_in_console(dict_fact_files, dict_known_unknown_extentions)
 
-
 if __name__ == '__main__':
-    dict_extentions = {'archives': ['ZIP', 'GZ', 'TAR'], 'audio': ['MP3', 'OGG', 'WAV', 'AMR'],
-                       'documents': ['DOC', 'DOCX', 'TXT', 'PDF', 'XLSX', 'PPTX'],
-                       'images': ['JPEG', 'PNG', 'JPG', 'SVG'], 'video': ['AVI', 'MP4', 'MOV', 'MKV']} 
-                       
-    dict_fact_files = {'archives': [],  'audio': [], 'documents': [], 
-                      'images': [], 'uknown_extension': [], 'video': []}
-
-    dict_known_unknown_extentions = {
-        'known extensions': set(), 'unknown extensions': set()}
     main()
